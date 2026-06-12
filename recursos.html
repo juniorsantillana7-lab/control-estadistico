@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Repositorio de archivos | Examen PC3</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<!-- Barra superior (solo móvil) -->
+<header class="barra-movil">
+    <img src="assets/img/marca/uni.png" alt="">
+    <strong>Examen PC3</strong>
+    <button class="btn-menu" type="button" aria-expanded="false" aria-label="Abrir menú">&#9776;</button>
+</header>
+<div class="velo"></div>
+
+<!-- Panel de navegación lateral -->
+<aside class="panel-lateral">
+    <a class="marca" href="index.html">
+        <img src="assets/img/marca/uni.png" alt="Escudo UNI">
+        <span>
+            <strong>Control Estadístico</strong>
+            <small>Examen PC3 · FIIS</small>
+        </span>
+    </a>
+    <ul class="menu">
+        <li class="menu-titulo">Documento</li>
+        <li><a href="index.html"><span class="indice">P</span>Portada</a></li>
+        <li class="menu-titulo">Ejercicios</li>
+        <li><a href="ejercicio1.html"><span class="indice">1</span>Problema 1</a></li>
+        <li><a href="ejercicio2.html"><span class="indice">2</span>Problema 2</a></li>
+        <li><a href="ejercicio3.html"><span class="indice">3</span>Problema 3</a></li>
+        <li class="menu-titulo">Material</li>
+        <li><a class="activo" href="recursos.html" aria-current="page"><span class="indice">&amp;</span>Repositorio de archivos</a></li>
+    </ul>
+    <p class="panel-pie">UNI — FIIS<br>Examen PC3 · 2026</p>
+</aside>
+
+<main class="lienzo" id="contenido">
+
+    <header class="cabecera">
+        <p class="ruta">Examen PC3 — Material complementario</p>
+        <h1>Repositorio de archivos</h1>
+        <p class="resumen">
+            Scripts de análisis en Python y R, y libros de datos en Excel de cada
+            ejercicio. Cada script puede consultarse en línea o descargarse.
+        </p>
+        <span class="num-fantasma" aria-hidden="true">&amp;</span>
+    </header>
+
+    <div class="aviso aparece">
+        <span class="signo">&#182;</span>
+        <p>
+            Los scripts están comentados siguiendo <code>PEP 8</code> en Python y la guía de
+            estilo de Google en R. Para que el botón <em>Ver código</em> funcione en local,
+            sirve el sitio con <code>python -m http.server 8080</code>; si abres los archivos
+            con doble clic, usa directamente <em>Descargar</em>.
+        </p>
+    </div>
+
+    <!-- Ejercicio 1 -->
+    <section class="repositorio aparece" aria-labelledby="rep-1">
+        <header>
+            <span class="clave">E1</span>
+            <h2 id="rep-1">Problema 1</h2>
+            <span class="mini">assets/docs/ej1/</span>
+        </header>
+        <div class="archivo">
+            <span class="tipo py">.PY</span>
+            <span class="datos">
+                <strong>Script de análisis en Python</strong>
+                <span>analisis.py · pandas · statsmodels · scipy · matplotlib</span>
+            </span>
+            <span class="acciones">
+                <button class="boton" type="button" data-codigo="assets/docs/ej1/analisis.py">Ver código</button>
+                <a class="boton primario" href="assets/docs/ej1/analisis.py" download>Descargar</a>
+            </span>
+        </div>
+        <div class="archivo">
+            <span class="tipo rr">.R</span>
+            <span class="datos">
+                <strong>Script de análisis en R</strong>
+                <span>analisis.R · ggplot2 · dplyr · gridExtra</span>
+            </span>
+            <span class="acciones">
+                <button class="boton" type="button" data-codigo="assets/docs/ej1/analisis.R">Ver código</button>
+                <a class="boton primario" href="assets/docs/ej1/analisis.R" download>Descargar</a>
+            </span>
+        </div>
+    </section>
+
+    <!-- Ejercicio 2 -->
+    <section class="repositorio aparece" aria-labelledby="rep-2">
+        <header>
+            <span class="clave">E2</span>
+            <h2 id="rep-2">Problema 2</h2>
+            <span class="mini">assets/docs/ej2/</span>
+        </header>
+        <div class="archivo">
+            <span class="tipo py">.PY</span>
+            <span class="datos">
+                <strong>Script de análisis en Python</strong>
+                <span>analisis.py · pandas · statsmodels · scipy · matplotlib</span>
+            </span>
+            <span class="acciones">
+                <button class="boton" type="button" data-codigo="assets/docs/ej2/analisis.py">Ver código</button>
+                <a class="boton primario" href="assets/docs/ej2/analisis.py" download>Descargar</a>
+            </span>
+        </div>
+        <div class="archivo">
+            <span class="tipo rr">.R</span>
+            <span class="datos">
+                <strong>Script de análisis en R</strong>
+                <span>analisis.R · ggplot2 · dplyr · gridExtra</span>
+            </span>
+            <span class="acciones">
+                <button class="boton" type="button" data-codigo="assets/docs/ej2/analisis.R">Ver código</button>
+                <a class="boton primario" href="assets/docs/ej2/analisis.R" download>Descargar</a>
+            </span>
+        </div>
+    </section>
+
+    <!-- Ejercicio 3 -->
+    <section class="repositorio aparece" aria-labelledby="rep-3">
+        <header>
+            <span class="clave">E3</span>
+            <h2 id="rep-3">Problema 3</h2>
+            <span class="mini">assets/docs/ej3/</span>
+        </header>
+        <div class="archivo">
+            <span class="tipo py">.PY</span>
+            <span class="datos">
+                <strong>Script de análisis en Python</strong>
+                <span>analisis.py · pandas · statsmodels · scipy · matplotlib</span>
+            </span>
+            <span class="acciones">
+                <button class="boton" type="button" data-codigo="assets/docs/ej3/analisis.py">Ver código</button>
+                <a class="boton primario" href="assets/docs/ej3/analisis.py" download>Descargar</a>
+            </span>
+        </div>
+        <div class="archivo">
+            <span class="tipo rr">.R</span>
+            <span class="datos">
+                <strong>Script de análisis en R</strong>
+                <span>analisis.R · ggplot2 · dplyr · gridExtra</span>
+            </span>
+            <span class="acciones">
+                <button class="boton" type="button" data-codigo="assets/docs/ej3/analisis.R">Ver código</button>
+                <a class="boton primario" href="assets/docs/ej3/analisis.R" download>Descargar</a>
+            </span>
+        </div>
+    </section>
+
+    <nav class="paginacion" aria-label="Navegación entre páginas">
+        <a class="pag-tarjeta" href="ejercicio3.html">
+            <small>&#8592; Anterior</small>
+            <strong>Problema 3</strong>
+        </a>
+        <a class="pag-tarjeta siguiente" href="index.html">
+            <small>Volver &#8594;</small>
+            <strong>Portada</strong>
+        </a>
+    </nav>
+
+</main>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>

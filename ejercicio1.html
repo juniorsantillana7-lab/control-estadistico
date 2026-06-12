@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ejercicio 1 · Diseño factorial | Examen PC3</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<!-- Barra superior (solo móvil) -->
+<header class="barra-movil">
+    <img src="assets/img/marca/uni.png" alt="">
+    <strong>Examen PC3</strong>
+    <button class="btn-menu" type="button" aria-expanded="false" aria-label="Abrir menú">&#9776;</button>
+</header>
+<div class="velo"></div>
+
+<!-- Panel de navegación lateral -->
+<aside class="panel-lateral">
+    <a class="marca" href="index.html">
+        <img src="assets/img/marca/uni.png" alt="Escudo UNI">
+        <span>
+            <strong>Control Estadístico</strong>
+            <small>Examen PC3 · FIIS</small>
+        </span>
+    </a>
+    <ul class="menu">
+        <li class="menu-titulo">Documento</li>
+        <li><a href="index.html"><span class="indice">P</span>Portada</a></li>
+        <li class="menu-titulo">Ejercicios</li>
+        <li><a class="activo" href="ejercicio1.html" aria-current="page"><span class="indice">1</span>Problema 1</a></li>
+        <li><a href="ejercicio2.html"><span class="indice">2</span>Problema 2</a></li>
+        <li><a href="ejercicio3.html"><span class="indice">3</span>Problema 3</a></li>
+        <li class="menu-titulo">Material</li>
+        <li><a href="recursos.html"><span class="indice">&amp;</span>Repositorio de archivos</a></li>
+    </ul>
+    <p class="panel-pie">UNI — FIIS<br>Examen PC3 · 2026</p>
+</aside>
+
+<main class="lienzo" id="contenido">
+
+    <header class="cabecera">
+        <p class="ruta">Examen PC3 — Ejercicio 1 de 3</p>
+        <h1>Diseño factorial completamente aleatorizado</h1>
+        <p class="resumen">
+            Efecto de la máquina y del operario sobre el número de sacos defectuosos
+            por día, analizado con un ANOVA de dos factores y comparaciones de Tukey.
+        </p>
+        <div class="fila-datos">
+            <span class="dato">Diseño <b>factorial 6×4</b></span>
+            <span class="dato">Réplicas <b>n = 3</b></span>
+            <span class="dato">Observaciones <b>N = 72</b></span>
+            <span class="dato">Respuesta <b>sacos defectuosos</b></span>
+        </div>
+        <span class="num-fantasma" aria-hidden="true">01</span>
+    </header>
+
+    <!-- A · Enunciado -->
+    <section class="seccion aparece" aria-labelledby="t-enunciado">
+        <div class="seccion-cab">
+            <span class="clave">A</span>
+            <h2 id="t-enunciado">Enunciado del problema</h2>
+            <span class="hilo"></span>
+        </div>
+        <figure class="figura">
+            <img src="assets/img/ej1/enunciado.png" alt="Enunciado oficial del ejercicio 1">
+            <a class="descargar-mini" href="assets/img/ej1/enunciado.png" download>Descargar</a>
+            <figcaption>
+                <span class="etiqueta-fig">LÁMINA 1.1</span>
+                <span>enunciado.png — clic para ampliar</span>
+            </figcaption>
+        </figure>
+    </section>
+
+    <!-- B · Hipótesis -->
+    <section class="seccion aparece" aria-labelledby="t-hipotesis">
+        <div class="seccion-cab">
+            <span class="clave">B</span>
+            <h2 id="t-hipotesis">Formulación de hipótesis</h2>
+            <span class="hilo"></span>
+        </div>
+        <figure class="figura">
+            <img src="assets/img/ej1/hipotesis.png" alt="Formulación de hipótesis del ejercicio 1">
+            <a class="descargar-mini" href="assets/img/ej1/hipotesis.png" download>Descargar</a>
+            <figcaption>
+                <span class="etiqueta-fig">LÁMINA 1.2</span>
+                <span>hipotesis.png — clic para ampliar</span>
+            </figcaption>
+        </figure>
+    </section>
+
+    <!-- C · Resolución por herramienta -->
+    <section class="seccion aparece" aria-labelledby="t-herramientas">
+        <div class="seccion-cab">
+            <span class="clave">C</span>
+            <h2 id="t-herramientas">Resolución por herramienta</h2>
+            <span class="hilo"></span>
+        </div>
+
+        <div class="pestanas" role="tablist" aria-label="Herramienta de análisis" data-pestanas="herr">
+            <button class="pestana" id="pest-excel" role="tab" data-tool="excel" aria-controls="panel-excel" aria-selected="true"><span class="punto"></span>Excel</button>
+            <button class="pestana" id="pest-minitab" role="tab" data-tool="minitab" aria-controls="panel-minitab" aria-selected="false" tabindex="-1"><span class="punto"></span>Minitab</button>
+            <button class="pestana" id="pest-python" role="tab" data-tool="python" aria-controls="panel-python" aria-selected="false" tabindex="-1"><span class="punto"></span>Python</button>
+            <button class="pestana" id="pest-r" role="tab" data-tool="r" aria-controls="panel-r" aria-selected="false" tabindex="-1"><span class="punto"></span>R</button>
+        </div>
+
+        <div class="panel-tab visible" id="panel-excel" role="tabpanel" aria-labelledby="pest-excel" data-grupo="herr">
+            <div class="galeria">
+                <figure class="figura">
+                    <img src="assets/img/ej1/excel-1.png" alt="Resolución en Excel, captura 1">
+                    <a class="descargar-mini" href="assets/img/ej1/excel-1.png" download>Descargar</a>
+                    <figcaption><span class="etiqueta-fig">EXCEL · 01</span><span>excel-1.png</span></figcaption>
+                </figure>
+                <figure class="figura">
+                    <img src="assets/img/ej1/excel-2.png" alt="Resolución en Excel, captura 2">
+                    <a class="descargar-mini" href="assets/img/ej1/excel-2.png" download>Descargar</a>
+                    <figcaption><span class="etiqueta-fig">EXCEL · 02</span><span>excel-2.png</span></figcaption>
+                </figure>
+                <figure class="figura">
+                    <img src="assets/img/ej1/excel-3.png" alt="Resolución en Excel, captura 3">
+                    <a class="descargar-mini" href="assets/img/ej1/excel-3.png" download>Descargar</a>
+                    <figcaption><span class="etiqueta-fig">EXCEL · 03</span><span>excel-3.png</span></figcaption>
+                </figure>
+                <figure class="figura">
+                    <img src="assets/img/ej1/excel-4.png" alt="Resolución en Excel, captura 4">
+                    <a class="descargar-mini" href="assets/img/ej1/excel-4.png" download>Descargar</a>
+                    <figcaption><span class="etiqueta-fig">EXCEL · 04</span><span>excel-4.png</span></figcaption>
+                </figure>
+            </div>
+            <p class="sin-capturas">Aún no hay capturas de Excel para este ejercicio.</p>
+        </div>
+
+        <div class="panel-tab" id="panel-minitab" role="tabpanel" aria-labelledby="pest-minitab" data-grupo="herr">
+            <div class="galeria">
+                <figure class="figura">
+                    <img src="assets/img/ej1/minitab-1.png" alt="Resolución en Minitab, captura 1">
+                    <a class="descargar-mini" href="assets/img/ej1/minitab-1.png" download>Descargar</a>
+                    <figcaption><span class="etiqueta-fig">MINITAB · 01</span><span>minitab-1.png</span></figcaption>
+                </figure>
+                <figure class="figura">
+                    <img src="assets/img/ej1/minitab-2.png" alt="Resolución en Minitab, captura 2">
+                    <a class="descargar-mini" href="assets/img/ej1/minitab-2.png" download>Descargar</a>
+                    <figcaption><span class="etiqueta-fig">MINITAB · 02</span><span>minitab-2.png</span></figcaption>
+                </figure>
+                <figure class="figura">
+                    <img src="assets/img/ej1/minitab-3.png" alt="Resolución en Minitab, captura 3">
+                    <a class="descargar-mini" href="assets/img/ej1/minitab-3.png" download>Descargar</a>
+                    <figcaption><span class="etiqueta-fig">MINITAB · 03</span><span>minitab-3.png</span></figcaption>
+                </figure>
+                <figure class="figura">
+                    <img src="assets/img/ej1/minitab-4.png" alt="Resolución en Minitab, captura 4">
+                    <a class="descargar-mini" href="assets/img/ej1/minitab-4.png" download>Descargar</a>
+                    <figcaption><span class="etiqueta-fig">MINITAB · 04</span><span>minitab-4.png</span></figcaption>
+                </figure>
+            </div>
+            <p class="sin-capturas">Aún no hay capturas de Minitab para este ejercicio.</p>
+        </div>
+
+        <div class="panel-tab" id="panel-python" role="tabpanel" aria-labelledby="pest-python" data-grupo="herr">
+            <div class="galeria">
+                <figure class="figura">
+                    <img src="assets/img/ej1/python-1.png" alt="Resolución en Python, captura 1">
+                    <a class="descargar-mini" href="assets/img/ej1/python-1.png" download>Descargar</a>
+                    <figcaption><span class="etiqueta-fig">PYTHON · 01</span><span>python-1.png</span></figcaption>
+                </figure>
+                <figure class="figura">
+                    <img src="assets/img/ej1/python-2.png" alt="Resolución en Python, captura 2">
+                    <a class="descargar-mini" href="assets/img/ej1/python-2.png" download>Descargar</a>
+                    <figcaption><span class="etiqueta-fig">PYTHON · 02</span><span>python-2.png</span></figcaption>
+                </figure>
+                <figure class="figura">
+                    <img src="assets/img/ej1/python-3.png" alt="Resolución en Python, captura 3">
+                    <a class="descargar-mini" href="assets/img/ej1/python-3.png" download>Descargar</a>
+                    <figcaption><span class="etiqueta-fig">PYTHON · 03</span><span>python-3.png</span></figcaption>
+                </figure>
+                <figure class="figura">
+                    <img src="assets/img/ej1/python-4.png" alt="Resolución en Python, captura 4">
+                    <a class="descargar-mini" href="assets/img/ej1/python-4.png" download>Descargar</a>
+                    <figcaption><span class="etiqueta-fig">PYTHON · 04</span><span>python-4.png</span></figcaption>
+                </figure>
+            </div>
+            <p class="sin-capturas">Aún no hay capturas de Python para este ejercicio.</p>
+        </div>
+
+        <div class="panel-tab" id="panel-r" role="tabpanel" aria-labelledby="pest-r" data-grupo="herr">
+            <div class="galeria">
+                <figure class="figura">
+                    <img src="assets/img/ej1/r-1.png" alt="Resolución en R, captura 1">
+                    <a class="descargar-mini" href="assets/img/ej1/r-1.png" download>Descargar</a>
+                    <figcaption><span class="etiqueta-fig">R · 01</span><span>r-1.png</span></figcaption>
+                </figure>
+                <figure class="figura">
+                    <img src="assets/img/ej1/r-2.png" alt="Resolución en R, captura 2">
+                    <a class="descargar-mini" href="assets/img/ej1/r-2.png" download>Descargar</a>
+                    <figcaption><span class="etiqueta-fig">R · 02</span><span>r-2.png</span></figcaption>
+                </figure>
+                <figure class="figura">
+                    <img src="assets/img/ej1/r-3.png" alt="Resolución en R, captura 3">
+                    <a class="descargar-mini" href="assets/img/ej1/r-3.png" download>Descargar</a>
+                    <figcaption><span class="etiqueta-fig">R · 03</span><span>r-3.png</span></figcaption>
+                </figure>
+                <figure class="figura">
+                    <img src="assets/img/ej1/r-4.png" alt="Resolución en R, captura 4">
+                    <a class="descargar-mini" href="assets/img/ej1/r-4.png" download>Descargar</a>
+                    <figcaption><span class="etiqueta-fig">R · 04</span><span>r-4.png</span></figcaption>
+                </figure>
+            </div>
+            <p class="sin-capturas">Aún no hay capturas de R para este ejercicio.</p>
+        </div>
+    </section>
+
+    <!-- D · Interpretaciones -->
+    <section class="seccion aparece" aria-labelledby="t-conclusiones">
+        <div class="seccion-cab">
+            <span class="clave">D</span>
+            <h2 id="t-conclusiones">Interpretaciones y conclusiones</h2>
+            <span class="hilo"></span>
+        </div>
+        <div class="nota">
+            <h3>Lectura de resultados</h3>
+            <p class="nota-sub">ANOVA · Tukey · comparación entre software · conclusión</p>
+            <figure class="figura">
+                <img src="assets/img/ej1/conclusiones.png" alt="Interpretaciones y conclusiones del ejercicio 1">
+                <a class="descargar-mini" href="assets/img/ej1/conclusiones.png" download>Descargar</a>
+                <figcaption>
+                    <span class="etiqueta-fig">LÁMINA 1.3</span>
+                    <span>conclusiones.png — clic para ampliar</span>
+                </figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <nav class="paginacion" aria-label="Navegación entre ejercicios">
+        <a class="pag-tarjeta" href="index.html">
+            <small>&#8592; Anterior</small>
+            <strong>Portada</strong>
+        </a>
+        <a class="pag-tarjeta siguiente" href="ejercicio2.html">
+            <small>Siguiente &#8594;</small>
+            <strong>Ejercicio 2 · Latino con dato perdido</strong>
+        </a>
+    </nav>
+
+</main>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>

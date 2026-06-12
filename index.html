@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Examen PC3 · Control Estadístico de la Calidad</title>
+<meta name="description" content="Resolución comparada del examen PC3 de Control Estadístico de la Calidad en Excel, Minitab, Python y R.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body>
+
+<!-- curva normal decorativa -->
+<svg class="gauss-fondo" viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M0,290 C120,288 170,40 260,40 C350,40 400,288 520,290"
+          fill="none" stroke="#11705c" stroke-width="3"/>
+    <line x1="260" y1="40" x2="260" y2="290" stroke="#c25d3a" stroke-width="2" stroke-dasharray="6 7"/>
+    <line x1="0" y1="290" x2="520" y2="290" stroke="#26221a" stroke-width="2"/>
+</svg>
+
+<div class="portada">
+
+    <p class="portada-franja">Universidad Nacional de Ingeniería · Facultad de Ingeniería Industrial y de Sistemas</p>
+
+    <header class="portada-hero">
+        <div class="sello aparece">
+            <img src="assets/img/marca/uni.png" alt="Escudo de la Universidad Nacional de Ingeniería">
+        </div>
+        <span class="portada-etiqueta aparece">Práctica Calificada N.º 3</span>
+        <h1 class="aparece">Control Estadístico <em>de la Calidad</em></h1>
+        <p class="bajada aparece">
+            Resolución comparada de tres diseños experimentales empleando
+            cuatro entornos de análisis: Excel, Minitab, Python y R.
+        </p>
+    </header>
+
+    <dl class="colofon aparece">
+        <div>
+            <dt>Curso</dt>
+            <dd>Control Estadístico de la Calidad</dd>
+        </div>
+        <div>
+            <dt>Evaluación</dt>
+            <dd>Examen PC3</dd>
+        </div>
+        <div>
+            <dt>Métodos</dt>
+            <dd>ANOVA factorial · Cuadrado latino · Prueba de Tukey</dd>
+        </div>
+        <div>
+            <dt>Entornos</dt>
+            <dd>Excel · Minitab · Python · R</dd>
+        </div>
+    </dl>
+
+    <section aria-label="Contenido del examen">
+        <div class="indice-titulo aparece">
+            <h2>Contenido del examen</h2>
+            <span class="hilo"></span>
+            <span class="folio">03 ejercicios · 01 repositorio</span>
+        </div>
+
+        <div class="rejilla-indice">
+            <a class="tarjeta-ej aparece" href="ejercicio1.html">
+                <span class="folio-num">01</span>
+                <h3>Diseño factorial completamente aleatorizado</h3>
+                <p>Dos factores — máquina (6 niveles) y operario (4 niveles) — con 3 réplicas: 72 observaciones de sacos defectuosos por día.</p>
+                <span class="herramientas">
+                    <span class="chip excel"><i></i>Excel</span>
+                    <span class="chip minitab"><i></i>Minitab</span>
+                    <span class="chip python"><i></i>Python</span>
+                    <span class="chip r"><i></i>R</span>
+                </span>
+                <span class="abrir"><span>Abrir ejercicio</span><span>&#8594;</span></span>
+            </a>
+
+            <a class="tarjeta-ej aparece" href="ejercicio2.html">
+                <span class="folio-num">02</span>
+                <h3>Cuadrado latino 4×4 con dato perdido</h3>
+                <p>Orden de montaje × operador × método de ensamble, con estimación del valor faltante antes del análisis de varianza.</p>
+                <span class="herramientas">
+                    <span class="chip excel"><i></i>Excel</span>
+                    <span class="chip minitab"><i></i>Minitab</span>
+                    <span class="chip python"><i></i>Python</span>
+                    <span class="chip r"><i></i>R</span>
+                </span>
+                <span class="abrir"><span>Abrir ejercicio</span><span>&#8594;</span></span>
+            </a>
+
+            <a class="tarjeta-ej aparece" href="ejercicio3.html">
+                <span class="folio-num">03</span>
+                <h3>Cuadrado latino 4×4 — peso por proveedor</h3>
+                <p>Inspectores (filas) × escalas (columnas) × proveedores (tratamientos) sobre el peso en gramos del producto.</p>
+                <span class="herramientas">
+                    <span class="chip excel"><i></i>Excel</span>
+                    <span class="chip minitab"><i></i>Minitab</span>
+                    <span class="chip python"><i></i>Python</span>
+                    <span class="chip r"><i></i>R</span>
+                </span>
+                <span class="abrir"><span>Abrir ejercicio</span><span>&#8594;</span></span>
+            </a>
+        </div>
+
+        <a class="banda-recursos aparece" href="recursos.html">
+            <span class="icono-doc">&lt;/&gt;</span>
+            <span>
+                <strong>Repositorio de archivos</strong>
+                <small>Scripts de Python y R comentados, y libros de datos en Excel listos para descargar.</small>
+            </span>
+            <span class="flecha">&#8594;</span>
+        </a>
+    </section>
+
+    <footer class="portada-pie">
+        UNI — FIIS · Examen PC3 · 2026
+    </footer>
+</div>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>
