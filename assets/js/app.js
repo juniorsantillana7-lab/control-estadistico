@@ -1,5 +1,5 @@
 /* ============================================================
-   app.js — Examen PC3 · Control Estadístico de la Calidad
+   app.js — Examen PC3 · Control Estadístico de Procesos
    Interactividad del sitio (vanilla JS, sin dependencias):
    menú móvil · pestañas · figuras faltantes · lightbox ·
    visor de código · aparición al hacer scroll
